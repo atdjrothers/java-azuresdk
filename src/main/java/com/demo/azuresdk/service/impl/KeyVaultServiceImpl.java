@@ -22,19 +22,19 @@ import java.util.stream.Collectors;
 @Service
 public class KeyVaultServiceImpl implements KeyVaultService {
     private static final Logger LOGGER = LoggerFactory.getLogger(KeyVaultServiceImpl.class);
-    private final AzureResourceManager azureResourceManager;
+    private final AzureResourceManager azureResourceManager = null;
 
     public KeyVaultServiceImpl() {
-        final AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
-        final TokenCredential credential = new DefaultAzureCredentialBuilder()
-                .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
-                .build();
-
-        azureResourceManager = AzureResourceManager
-                .configure()
-                .withLogLevel(HttpLogDetailLevel.BASIC)
-                .authenticate(credential, profile)
-                .withDefaultSubscription();
+//        final AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
+//        final TokenCredential credential = new DefaultAzureCredentialBuilder()
+//                .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
+//                .build();
+//
+//        azureResourceManager = AzureResourceManager
+//                .configure()
+//                .withLogLevel(HttpLogDetailLevel.BASIC)
+//                .authenticate(credential, profile)
+//                .withDefaultSubscription();
     }
 
     @Override
