@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'java-azuresdk-brownbag20211203'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FB3E087CA10C4626A318E3D876601B51 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66B5AE1A9C9F4980AB2059F70260F8F6 }}
           package: '*.jar'
